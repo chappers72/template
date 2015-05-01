@@ -1,0 +1,5 @@
+127.0.0.1 - - [01/May/2015:14:29:29 +0000] "GET / HTTP/1.1" 200 204 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36"
+127.0.0.1 - - [01/May/2015:14:29:29 +0000] "GET /stylesheets/style.css HTTP/1.1" 200 87 "http://localhost:8001/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36"
+127.0.0.1 - - [01/May/2015:14:29:29 +0000] "GET /favicon.ico HTTP/1.1" 404 1294 "http://localhost:8001/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36"
+127.0.0.1 - - [01/May/2015:14:29:59 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36"
+127.0.0.1 - - [01/May/2015:14:29:59 +0000] "GET /stylesheets/style.css HTTP/1.1" 200 87 "http://localhost:8001/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36"
