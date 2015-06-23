@@ -4,5 +4,5 @@
 var request=require('request');
 
 module.exports.doSomething=function(req,res) {
-  
+  console.log('i am here',req);
 };

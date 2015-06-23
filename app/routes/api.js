@@ -1,7 +1,12 @@
 /**
  * Created by StevenChapman on 01/05/15.
  */
+
 var ctrl = require('../controllers/myController');
-module.exports=function(app){
-    app.post('/api/mycall',ctrl.doSomething);
-}
+var express = require('express');
+var router = express.Router();
+
+/* GET users listing. */
+router.post('/mycall', ctrl.doSomething);
+
+module.exports = router;

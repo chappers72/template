@@ -7,9 +7,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var request = require('request');
 
 var routes = require('./app/routes/index');
 var users = require('./app/routes/users');
+var api = require('./app/routes/api');
 
 var app = express();
 var logDirectory = __dirname + '/log'
@@ -31,13 +33,15 @@ var accessLogStream = FileStreamRotator.getStream({
 app.use(logger('combined', {stream: accessLogStream}))
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/api', api);
 app.use('/', routes);
 app.use('/users', users);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
