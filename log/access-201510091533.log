@@ -1,0 +1,4 @@
+127.0.0.1 - - [09/Oct/2015:14:33:46 +0000] "GET / HTTP/1.1" 200 417 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+127.0.0.1 - - [09/Oct/2015:14:33:46 +0000] "GET /bower_components/angular/angular.min.js HTTP/1.1" 404 1537 "http://localhost:8007/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+127.0.0.1 - - [09/Oct/2015:14:33:46 +0000] "GET /bower_components/bootstrap/dist/css/bootstrap.min.css HTTP/1.1" 404 1537 "http://localhost:8007/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+127.0.0.1 - - [09/Oct/2015:14:33:46 +0000] "GET /stylesheets/style.css HTTP/1.1" 200 87 "http://localhost:8007/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"

@@ -1,2 +1,96 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<container>
+    <h1>{{title}}</h1>
+
+    <form class="form-horizontal">
+        <fieldset>
+            <!-- Form Name -->
+            <legend>Booking Retrieval</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Booking number: </label>
+
+                <div class="col-md-4">
+                    <input ng-model="bookingnumber" id="textinput" name="textinput" type="text"
+                           placeholder="enter booking....." class="form-control input-md">
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="singlebutton">Click to retrieve</label>
+
+                <div class="col-md-4">
+                    <button id="singlebutton" ng-click="getSingleBooking()" name="singlebutton" class="btn btn-primary">
+                        Get my booking
+                    </button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+    <well>
+        <div ng-repeat="booking in theBooking.Reply.GetBookingReply">
+            <h2>Booking</h2>
+            <table class="table table-striped">
+                <thead>
+                <th>Field</th>
+                <th>Value</th>
+                </thead>
+                <tbody>
+                <tr ng-repeat="(key, value) in booking" ng-class="key">
+                    <td>[[[key]]]</td>
+                    <td>[[[value]]]</td>
+                </tr>
+                </tbody>
+            </table>
+            <h2>Services</h2>
+
+            <div ng-repeat="sn in booking.Services">
+                <div ng-repeat="snn in sn">
+                    <div ng-repeat="snnn in snn">
+                    <table class="table table-striped">
+                        <thead>
+                        <th>Field</th>
+                        <th>Value</th>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="(key, value) in snnn" ng-class="key">
+                            <td>[[[key]]]</td>
+                            <td>[[[value]]]</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                        </div>
+                </div>
+                <h2>Room Configs</h2>
+                <div ng-repeat="snn in sn.Service">
+                    <div ng-repeat="snnn in snn.RoomConfigs">
+                        <div ng-repeat="snnnn in snnn.RoomConfig">
+                            <table class="table table-striped">
+                                <thead>
+                                <th>Field</th>
+                                <th>Value</th>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="(key, value) in snnnn" ng-class="key">
+                                    <td>[[[key]]]</td>
+                                    <td>[[[value]]]</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+
+
+        </div>
+
+        </div>
+
+
+    </well>
+</container>
+
